@@ -3,7 +3,7 @@
 ---
 ## Error description
 * Error can be seen in [FILE](https://github.com/bojcicm/Vertex-definition-problem/blob/master/VertexPositionProblem/VertexPositionProblem/Renderer3D.cpp) LINE 70-74
-* In `Renderer.cpp` when we are updating `_model` we are reading list of vertices and expecting for `ValueX` to be 1337 or `ValueY` to be 1338
+* In `Renderer.cpp` when `_model` is updating it is reading list of vertices and expecting for `ValueX` to be 1337 or `ValueY` to be 1338
 * Value present is **0** or something random from memory
 
 ---
