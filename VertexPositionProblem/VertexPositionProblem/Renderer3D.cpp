@@ -65,7 +65,13 @@ void Renderer3D::CreateWindowSizeDependentResources()
 void Renderer3D::Update(DX::StepTimer const& timer)
 {
 	auto vertices = _model->GetVertices();
-	DebugPrint("Renderer3D::Update - vertices value X: " + std::to_string(vertices[0].valueX));
+	for(auto i = 0; i < _model->GetVertexCount(); i++)
+	{
+		DebugPrint("Renderer3D::Update - vertices value X: " + std::to_string(vertices[i].valueX) + "\n");
+		DebugPrint("Renderer3D::Update - vertices value Y: " + std::to_string(vertices[i].valueY) + "\n");
+		assert(vertices[i].valueX == 1337);
+		assert(vertices[i].valueY == 1338);
+	}
 }
 
 void Renderer3D::Render()
